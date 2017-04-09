@@ -24,8 +24,8 @@
 ## groups_users_table
 |Column     |Type       |Option               |
 |:---------:|:---------:|:-------------------:|
-|user_id    |integer    |not null,foreign key |
-|group_id   |integer    |not null,foreign key |
+|user_id    |references |not null,foreign key |
+|group_id   |references |not null,foreign key |
 ### Assosiation
 * belongs_to :users
 * belongs_to :groups
@@ -35,8 +35,8 @@
 |:---------:|:---------:|:-------------------:|
 |content    |string     |not null             |
 |image      |string     |                     |
-|user _id   |integer    |not null,foreign key |
-|group_id   |integer    |not null,foreign key |
+|user _id   |references |not null,foreign key |
+|group_id   |references |not null,foreign key |
 ### Assosiation
 * belongs_to :users
 * belongs_to :groups
