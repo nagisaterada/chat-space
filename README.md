@@ -7,9 +7,9 @@
 |email      |string     |not null             |
 |password   |string     |not null             |
 ### Assosiation
-has_many :groups_users
-has_many :groups,through: groups_users
-has_many :messages
+* has_many :groups_users
+* has_many :groups,through: groups_users
+* has_many :messages
 
 
 ## groups_table
@@ -17,9 +17,9 @@ has_many :messages
 |:---------:|:---------:|:-------------------:|
 |name       |string     |not null             |
 ### Assosiation
-has_many :groups_users
-has_many :users,through: groups_users
-has_many :messages
+* has_many :groups_users
+* has_many :users,through: groups_users
+* has_many :messages
 
 ## groups_users_table
 |Column     |Type       |Option               |
@@ -27,8 +27,8 @@ has_many :messages
 |user_id    |integer    |not null,foreign key |
 |group_id   |integer    |not null,foreign key |
 ### Assosiation
-belongs_to :users
-belongs_to :groups
+* belongs_to :users
+* belongs_to :groups
 
 ## messages_table
 |Column     |Type       |Option               |
@@ -38,5 +38,5 @@ belongs_to :groups
 |user _id   |integer    |not null,foreign key |
 |group_id   |integer    |not null,foreign key |
 ### Assosiation
-belongs_to :users
-belongs_to :groups
+* belongs_to :users
+* belongs_to :groups
