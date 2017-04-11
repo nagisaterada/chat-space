@@ -1,28 +1,42 @@
-== README
+# Database設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## users_table
+|Column     |Type       |Option               |
+|:---------:|:---------:|:-------------------:|
+|name       |string     |not null             |
+|email      |string     |not null             |
+|password   |string     |not null             |
+### Assosiation
+* has_many :groups_users
+* has_many :groups,through: groups_users
+* has_many :messages
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## groups_table
+|Column     |Type       |Option               |
+|:---------:|:---------:|:-------------------:|
+|name       |string     |not null             |
+### Assosiation
+* has_many :groups_users
+* has_many :users,through: groups_users
+* has_many :messages
+
+## groups_users_table
+|Column     |Type       |Option               |
+|:---------:|:---------:|:-------------------:|
+|user_id    |references |not null,foreign key |
+|group_id   |references |not null,foreign key |
+### Assosiation
+* belongs_to :users
+* belongs_to :groups
+
+## messages_table
+|Column     |Type       |Option               |
+|:---------:|:---------:|:-------------------:|
+|content    |string     |not null             |
+|image      |string     |                     |
+|user _id   |references |not null,foreign key |
+|group_id   |references |not null,foreign key |
+### Assosiation
+* belongs_to :users
+* belongs_to :groups
