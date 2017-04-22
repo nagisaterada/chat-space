@@ -3,11 +3,12 @@
     .contents__left__top
       %h3.contents__left__top__user-name
     .contents__left__bottom
-    <!-- 部分テンプレート -->
+      =render partial: :groups/group
   .contents__right
     .contents__right__top
-      %h3.contents__right__top__group-name
-      %h3.contents__right__top__member-name
+      .contents__right__top__group
+      %h3.contents__right__top__group__group-name
+      %h3.contents__right__top__group__group-members
     .contents__right__center
-    <!-- 部分テンプレート -->
+      =render partial: :message
     .contents__right__bottom
