@@ -1,14 +1,40 @@
-.contents
-  .contents__left
-    .contents__left__top
-      %h3.contents__left__top__user-name
-    .contents__left__bottom
-      =render partial: :groups
-  .contents__right
-    .contents__right__top
-      .contents__right__top__group
-      %h3.contents__right__top__group__group-name
-      %h3.contents__right__top__group__group-members
-    .contents__right__center
-      =render partial: :message
-    .contents__right__bottom
+%body
+= render 'layouts/flash'
+.chat
+  .chat-side
+    .chat-user
+      %h5  Nagisa
+      .chat-user__actions
+        %a.chat-user__action{:href => "/chat_groups/new"}
+          %i.fa.fa-pencil-square-o.fa-lg{"aria-hidden" => "true"}
+        %a.chat-user__action{:href => "/users/edit"}
+          %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
+    %ul.chat-groups
+      %li.chat-group
+        %p.chat-group__name KKK
+        %p.chat-group__message まだメッセージはありません。
+  .chat-main
+    .chat-header
+      .chat-header__left
+        %h2 KKK
+        %p.chat-header__users Members: Nagisa Mai
+      .chat-header__right
+        .chat-header__edit-btn{:type => "edit"} Edit
+    .chat-body
+      %ul.chat-messages
+        %li.chat-message
+          .chat-message__header.clearfix
+            %p.chat-message__name Nagisa
+            %p.chat-message__time 2017/05/03 12:51:31
+          %p.chat-message__body たいぷあめっせいーじ
+        %li.chat-message
+          .chat-message__header.clearfix
+            %p.chat-message__name Nagisa
+            %p.chat-message__time 2017/05/04 15:27:46
+          %p.chat-message__body たいぷあめっせーじ
+
+    .chat-footer
+      %form
+        %textarea{placeholder: "type a message"}
+        %i.fa.fa-picture-o.fa-lag{"aria-hidden" => "true"}
+        %input{type: "submit"}
