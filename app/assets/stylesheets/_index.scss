@@ -97,7 +97,7 @@ body{
     }
     .chat-body{
       position: relative;
-      height: 448px;
+      height: calc(100% - 191px);
       overflow-y: scroll;
       background-color: #fafafa;
         .chat-messages{
