@@ -1,13 +1,13 @@
 %body
-= render 'layouts/flash'
+=render 'layouts/flash'
 .chat
   .chat-side
     .chat-user
       %h5  Nagisa
       .chat-user__actions
-        %a.chat-user__action{:href => "/chat_groups/new"}
+        %a.chat-user__action{href: "/chat_groups/new"}
           %i.fa.fa-pencil-square-o.fa-lg{"aria-hidden" => "true"}
-        %a.chat-user__action{:href => "/users/edit"}
+        %a.chat-user__action{href: "/users/edit"}
           %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
     %ul.chat-groups
       %li.chat-group
@@ -19,7 +19,7 @@
         %h2 KKK
         %p.chat-header__users Members: Nagisa Mai
       .chat-header__right
-        .chat-header__edit-btn{:type => "edit"} Edit
+        .chat-header__edit-btn{type: "edit"} Edit
     .chat-body
       %ul.chat-messages
         %li.chat-message

@@ -1,67 +1,67 @@
-html{
+html {
   height: 100%;
 
 
-body{
+body {
+  height: 100%;
+
+.chat {
+    min-width: 100vw;
     height: 100%;
 
-.chat{
-    min-width: 980px;
-    height: 100%;
-
-  .chat-side{
+  .chat-side {
     height: 100%;
     width: 300px;
     float: left;
     color: white;
     background-color: #2f3e51;
-    .chat-user{
+    .chat-user {
       height: 60px;
       padding: 20px;
       background-color: #253141;
-      h5{
+      h5 {
         float: left;
         line-height: 60px;
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 2px;
       }
-      .chat-user__actions{
+      .chat-user__actions {
         float: right;
-        i{
+        i {
           margin-top: 20px;
           color: white;
         }
       }
     }
-    .chat-groups{
+    .chat-groups {
       background-color: #2f3e51;
       padding: 20px;
-        .chat-group{
-          &__name{
+        .chat-group {
+          &__name {
             font-size: 15px;
           }
-          &__message{
+          &__message {
             font-size: 11px;
           }
        }
     }
   }
 
-  .chat-main{
+  .chat-main {
     float: left;
     position: relative;
     height: 100%;
     width: calc(100% - 300px);
-    .chat-header{
+    .chat-header {
       padding-right: 40px;
       padding-left: 40px;
       border-bottom: 1px;
       background-color: #fff;
       height: 100px;
-        &__left{
+        &__left {
           float: left;
-          h2{
+          h2 {
             margin-top: 20px;
             line-height: 50px;
             letter-spacing: 2px;
@@ -69,17 +69,17 @@ body{
             font-size: 20px;
             font-weight: 400;
           }
-          p{
+          p {
           line-height: 20px;
           color: #999999;
           font-size: 12px;
+          }
         }
-        }
-        &__right{
+        &__right {
           float: right;
           height: 100px;
           width: 68px;
-          .chat-header__edit-btn{
+          .chat-header__edit-btn {
             display: inline-block;
             margin: 28px 0;
             padding-right: 20px;
@@ -95,62 +95,62 @@ body{
           }
         }
     }
-    .chat-body{
+    .chat-body {
       position: relative;
       height: calc(100% - 191px);
       overflow-y: scroll;
       background-color: #fafafa;
-        .chat-messages{
+      .chat-messages {
           position: absolute;
           right: 40px;
           left: 40px;
           padding-top: 46px;
           padding-left: 20px;
           list-style: none;
-          .chat-message{
+        .chat-message {
             margin-bottom: 40px;
-            .chat-message__header{
+          .chat-message__header {
               line-height: 20px;
-            .clearfix:after{
+          .clearfix:after {
               content: "";
               display: block;
               clear: both;
-            }
-              .chat-message__name{
+          }
+            .chat-message__name {
                 float: left;
                 margin-bottom: 10px;
                 font-weight: bold;
                 font-size: 16px;
                 color: #434A54;
-              }
-              .chat-message__time{
+            }
+            .chat-message__time {
                 float: left;
                 margin-left: 10px;
                 color: #aaa;
                 font-size: 10px;
-              }
-            }
-            .chat-message__body{
-              font-size: 14px;
-              clear: both;
             }
           }
+          .chat-message__body {
+              font-size: 14px;
+              clear: both;
+          }
         }
+      }
     }
-    .chat-footer{
+    .chat-footer {
       position: absolute;
       margin: 0;
       background-color: #ddd;
       width: 100%;
       height: 90px;
       padding: 20 40px;
-        form{
+      form {
           margin-top: 0em;
           width: calc(100% - 80px);
           height: 50px;
           position: relative;
           padding: 20px;
-            textarea{
+            textarea {
               float: left;
               width: 90%;
               height: 50px;
@@ -160,14 +160,14 @@ body{
               resize: none;
               background-color: white;
             }
-              i{
+              i {
               display: inline-block;
               position: absolute;
               float: right;
               line-height: 50px;
               right: 10%;
               }
-            input{
+            input {
               position: absolute;
               float: right;
               display: inline-block;
@@ -183,6 +183,9 @@ body{
       }
     }
   }
+
 }
+
 }
+
 }
