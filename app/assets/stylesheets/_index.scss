@@ -14,11 +14,11 @@ body {
     width: 300px;
     float: left;
     color: white;
-    background-color: #2f3e51;
+    background-color: $BlueColor;
     .chat-user {
       height: 60px;
       padding: 20px;
-      background-color: #253141;
+      background-color: $MoreBlueColor;
       h5 {
         float: left;
         line-height: 60px;
@@ -30,12 +30,12 @@ body {
         float: right;
         i {
           margin-top: 20px;
-          color: white;
+          color: $WhiteColor;
         }
       }
     }
     .chat-groups {
-      background-color: #2f3e51;
+      background-color: $BlueColor;
       padding: 20px;
         .chat-group {
           &__name {
@@ -57,7 +57,7 @@ body {
       padding-right: 40px;
       padding-left: 40px;
       border-bottom: 1px;
-      background-color: #fff;
+      background-color: $WhiteColor;
       height: 100px;
         &__left {
           float: left;
@@ -65,7 +65,7 @@ body {
             margin-top: 20px;
             line-height: 50px;
             letter-spacing: 2px;
-            color: #333;
+            color: #333333;
             font-size: 20px;
             font-weight: 400;
           }
@@ -86,7 +86,7 @@ body {
             padding-left: 20px;
             height: 40px;
             width: 24px;
-            color: #38aef0;
+            color: $SkyColor;
             font-size: 14px;
             border: 2px solid;
             border-color: #38aef0;
@@ -99,7 +99,7 @@ body {
       position: relative;
       height: calc(100% - 191px);
       overflow-y: scroll;
-      background-color: #fafafa;
+      background-color: $GrayColor;
       .chat-messages {
           position: absolute;
           right: 40px;
@@ -121,12 +121,12 @@ body {
                 margin-bottom: 10px;
                 font-weight: bold;
                 font-size: 16px;
-                color: #434A54;
+                color: $BlackColor;
             }
             .chat-message__time {
                 float: left;
                 margin-left: 10px;
-                color: #aaa;
+                color: #999999;
                 font-size: 10px;
             }
           }
@@ -140,7 +140,7 @@ body {
     .chat-footer {
       position: absolute;
       margin: 0;
-      background-color: #ddd;
+      background-color: $MoreGrayColor;
       width: 100%;
       height: 90px;
       padding: 20 40px;
@@ -158,7 +158,7 @@ body {
               margin-left: 27px;
               border: none;
               resize: none;
-              background-color: white;
+              background-color: $WhiteColor;
             }
               i {
               display: inline-block;
@@ -177,7 +177,7 @@ body {
               line-height: 50px;
               text-align: center;
               cursor: pointer;
-              background-color: #38aef0;
+              background-color: $SkyColor;
               color: white;
             }
       }
