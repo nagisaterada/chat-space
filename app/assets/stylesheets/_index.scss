@@ -73,13 +73,13 @@ body {
             margin-top: 20px;
             line-height: 50px;
             letter-spacing: 2px;
-            color: #333333;
+            color: $BlackColor;
             font-size: 20px;
             font-weight: 400;
           }
           p {
           line-height: 20px;
-          color: #999999;
+          color: $BlackColor;
           font-size: 12px;
           }
         }
@@ -130,7 +130,7 @@ body {
             .chat-message__time {
                 float: left;
                 margin-left: 10px;
-                color: #999999;
+                color: $LessGrayColor;
                 font-size: 10px;
             }
           }
@@ -193,3 +193,4 @@ body {
 }
 
 }
+
