@@ -1,13 +1,11 @@
-%body
-=render 'layouts/flash'
 .chat
-  .chat-side
-    .chat-user
+  .chat__side
+    .chat__side__user
       %h5  Nagisa
-      .chat-user__actions
-        %a.chat-user__action{href: "/chat_groups/new"}
+      .chat__side__user__actions
+        =link_to 'chat_groups/new' do
           %i.fa.fa-pencil-square-o.fa-lg{"aria-hidden" => "true"}
-        %a.chat-user__action{href: "/users/edit"}
+        =link_to 'users/edit' do
           %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
     %ul.chat-groups
       %li.chat-group
