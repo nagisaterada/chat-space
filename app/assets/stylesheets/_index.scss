@@ -1,0 +1,196 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+html {
+  height: 100%;
+
+
+  body {
+    height: 100%;
+
+    .chat {
+      min-width: 100vw;
+      height: 100%;
+
+      &__side {
+        height: 100%;
+        width: 300px;
+        float: left;
+        color: white;
+        background-color: $BlueColor;
+        &__user {
+          height: 60px;
+          padding: 20px;
+          background-color: $MoreBlueColor;
+          h5 {
+            float: left;
+            line-height: 60px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+          }
+          &__actions {
+            float: right;
+            i {
+              margin-top: 20px;
+              color: $WhiteColor;
+            }
+          }
+        }
+        .chat-groups {
+          background-color: $BlueColor;
+          padding: 20px;
+          .chat-group {
+            &__name {
+              font-size: 15px;
+            }
+            &__message {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .chat-main {
+        float: left;
+        position: relative;
+        height: 100%;
+        width: calc(100% - 300px);
+        .chat-header {
+          padding-right: 40px;
+          padding-left: 40px;
+          border-bottom: 1px;
+          background-color: $WhiteColor;
+          height: 100px;
+          &__left {
+            float: left;
+            h2 {
+              margin-top: 20px;
+              line-height: 50px;
+              letter-spacing: 2px;
+              color: $Black_GrayColor;
+              font-size: 20px;
+              font-weight: 400;
+            }
+            p {
+              line-height: 20px;
+              color: $Black_GrayColor;
+              font-size: 12px;
+            }
+          }
+          &__right {
+            float: right;
+            height: 100px;
+            width: 68px;
+            .chat-header__edit-btn {
+              display: inline-block;
+              margin: 28px 0;
+              padding-right: 20px;
+              padding-left: 20px;
+              height: 40px;
+              width: 24px;
+              color: $SkyColor;
+              font-size: 14px;
+              border: 2px solid;
+              border-color: #38aef0;
+              position: absolute;
+              line-height: 40px;
+            }
+          }
+        }
+        .chat-body {
+          position: relative;
+          height: calc(100% - 191px);
+          overflow-y: scroll;
+          background-color: $GrayColor;
+          .chat-messages {
+            position: absolute;
+            right: 40px;
+            left: 40px;
+            padding-top: 46px;
+            padding-left: 20px;
+            list-style: none;
+            .chat-message {
+              margin-bottom: 40px;
+              .chat-message__header {
+                line-height: 20px;
+                @include clearfix();
+                .chat-message__name {
+                  float: left;
+                  margin-bottom: 10px;
+                  font-weight: bold;
+                  font-size: 16px;
+                  color: $Black_GrayColor;
+                }
+                .chat-message__time {
+                  float: left;
+                  margin-left: 10px;
+                  color: $LessGrayColor;
+                  font-size: 10px;
+                }
+              }
+              .chat-message__body {
+                font-size: 14px;
+                clear: both;
+              }
+            }
+          }
+        }
+        .chat-footer {
+          position: absolute;
+          margin: 0;
+          background-color: $MoreGrayColor;
+          width: 100%;
+          height: 90px;
+          padding: 20 40px;
+          form {
+            margin-top: 0em;
+            width: calc(100% - 80px);
+            height: 50px;
+            position: relative;
+            padding: 20px;
+            textarea {
+              float: left;
+              width: 90%;
+              height: 50px;
+              line-height: 50px;
+              margin-left: 27px;
+              border: none;
+              resize: none;
+              background-color: $WhiteColor;
+            }
+            i {
+              display: inline-block;
+              position: absolute;
+              float: right;
+              line-height: 50px;
+              right: 10%;
+            }
+            input {
+              position: absolute;
+              float: right;
+              display: inline-block;
+              margin: 0 0 0 10px;
+              width: 80px;
+              height: 50px;
+              line-height: 50px;
+              text-align: center;
+              cursor: pointer;
+              background-color: $SkyColor;
+              color: white;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
