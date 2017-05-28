@@ -2,10 +2,10 @@
   color: white;
   text-align: center;
   &__alert {
-    background-color: $SkyColor;
+    background-color: $OrangeColor;
   }
   &__notice {
-    background-color: $OrangeColor;
+    background-color: SkyColor;
   }
 }
 
