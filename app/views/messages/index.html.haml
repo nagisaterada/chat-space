@@ -9,15 +9,15 @@
           %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
     %ul.chat-groups
       %li.chat-group
-        %p.chat-group__name KKK
-        %p.chat-group__message まだメッセージはありません。
+        = render partial: 'groups/group', collection: @groups
   .chat-main
     .chat-header
       .chat-header__left
         %h2 KKK
         %p.chat-header__users Members: Nagisa Mai
       .chat-header__right
-        .chat-header__edit-btn{type: "edit"} Edit
+        =link_to 'groups/1/edit', class: "chat-header__edit-btn" do
+          Edit
     .chat-body
       %ul.chat-messages
         %li.chat-message

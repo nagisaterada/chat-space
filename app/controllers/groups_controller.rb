@@ -15,6 +15,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    @group = Group.new
   end
 
   def update
@@ -23,7 +24,7 @@ class GroupsController < ApplicationController
   private
 
   def groups_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name,user_ids:[])
   end
 
 end
