@@ -3,9 +3,9 @@
     .chat__side__user
       %h5  Nagisa
       .chat__side__user__actions
-        =link_to new_group_path do
+        = link_to new_group_path do
           %i.fa.fa-pencil-square-o.fa-lg{"aria-hidden" => "true"}
-        =link_to edit_user_registration_path do
+        = link_to edit_user_registration_path do
           %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
     %ul.chat-groups
       %li.chat-group
@@ -16,7 +16,7 @@
         %h2 KKK
         %p.chat-header__users Members: Nagisa Mai
       .chat-header__right
-        =link_to 'groups/1/edit', class: 'chat-header__edit-btn' do
+        = link_to 'groups/1/edit', class: 'chat-header__edit-btn' do
           Edit
     .chat-body
       %ul.chat-messages
