@@ -1,3 +1,11 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 .chat-group-form {
   width: 980px;
   margin: 60px auto;
@@ -42,11 +50,7 @@
 
   &__field {
     margin-top: 30px;
-    &:after {
-      content: "";
-      clear: both;
-      display: block;
-    }
+    @include clearfix();
 
     &--left {
       float: left;
