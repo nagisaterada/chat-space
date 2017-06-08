@@ -4,9 +4,9 @@
       %h5  Nagisa
       .chat__side__user__actions
         = link_to new_group_path do
-          %i.fa.fa-pencil-square-o.fa-lg{"aria-hidden" => "true"}
+          %i.fa.fa-pencil-square-o.fa-lg{hidden: "true"}
         = link_to edit_user_registration_path do
-          %i.fa.fa-cog.fa-lg{"aria-hidden" => "true"}
+          %i.fa.fa-cog.fa-lg{hidden: "true"}
     %ul.chat-groups
       %li.chat-group
         = render partial: 'groups/group', collection: @groups
@@ -34,6 +34,6 @@
     .chat-footer
       %form
         %textarea{placeholder: "type a message"}
-        %i.fa.fa-picture-o.fa-lag{"aria-hidden" => "true"}
+        %i.fa.fa-picture-o.fa-lag{hidden: "true"}
         %input{type: "submit"}
 

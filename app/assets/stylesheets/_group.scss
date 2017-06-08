@@ -1,21 +1,13 @@
-@mixin clearfix() {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
 .chat-group-form {
   width: 980px;
   margin: 60px auto;
   padding: 40px;
-  background-color: #fff;
+  background-color: $WhiteColor;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
 
-  h1 {
+  &__title {
     letter-spacing: 2px;
     font-size: 24px;
     font-weight: bold;
@@ -31,14 +23,13 @@
 
     h2 {
       margin-bottom: 10px;
-      color: #f05050;
+      color: $RedColor;
       font-size: 14px;
     }
 
     ul {
       margin: 0;
       padding: 0;
-      list-style: none;
     }
 
     li {
@@ -55,8 +46,7 @@
     &--left {
       float: left;
       width: 30%;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding: 0 20px;
       box-sizing: border-box;
     }
 
@@ -86,11 +76,7 @@
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
-    &:after {
-      content: "";
-      clear: both;
-      display: block;
-    }
+    @include clearfix();
 
     &__name {
       float: left;
@@ -102,11 +88,11 @@
       cursor: pointer;
 
       &.chat-group-user__btn--add {
-        color: #38aef0;
+        color: $SkyColor;
       }
 
       &.chat-group-user__btn--remove {
-        color: #f05050;
+        color: $RedColor;
       }
     }
   }
@@ -114,8 +100,8 @@
   &__action-btn {
     display: inline-block;
     padding: 12px 20px;
-    color: #fff;
-    background-color: #38aef0;
+    color: $WhiteColor;
+    background-color: $SkyColor;
     border: 0;
   }
 }
