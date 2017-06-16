@@ -30,12 +30,12 @@
     ul {
       margin: 0;
       padding: 0;
-    }
 
-    li {
+      li {
       margin: 0;
       padding: 0;
       font-size: 13px;
+      }
     }
   }
 
@@ -55,19 +55,27 @@
       width: 70%;
     }
 
-    .chat-group-form__label {
+    &__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
     }
 
-    .chat-group-form__input {
+    &__input {
       float: left;
       width: 100%;
       line-height: 30px;
       padding: 10px 15px;
       box-sizing: border-box;
+    }
+
+    &__action-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: $WhiteColor;
+    background-color: $SkyColor;
+    border: 0;
     }
   }
 
@@ -97,11 +105,4 @@
     }
   }
 
-  &__action-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    color: $WhiteColor;
-    background-color: $SkyColor;
-    border: 0;
-  }
 }
