@@ -7,8 +7,8 @@ before_action :authenticate_user!, except: :index
     @groups = current_user.groups
     @group = Group.find(3)
     @message = Message.new
-    @messages = @message.content
-    @users = @group.users
+    @messages = @group.messages(:content)
+    @users = @group.users.name
   end
 
   def create

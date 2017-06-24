@@ -120,6 +120,7 @@ html {
               margin-bottom: 40px;
               .chat-message__header {
                 line-height: 20px;
+                margin: 8px 0 6px;
                 @include clearfix();
                 .chat-message__name {
                   float: left;
