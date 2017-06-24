@@ -28,3 +28,5 @@
       = form_for [@group, @message] do |f|
         = f.text_area :content, placeholder: 'type a message'
         = f.submit "SEND"
+        = f.file_field :image
+        %i.fa.fa-image
