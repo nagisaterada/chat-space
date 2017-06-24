@@ -24,16 +24,6 @@
       %ul.chat-messages
         %li.chat-message
           = render partial: 'messages/message', collection: @messages
-        /   .chat-message__header.clearfix
-        /     %p.chat-message__name Nagisa
-        /     %p.chat-message__time 2017/05/03 12:51:31
-        /   %p.chat-message__body たいぷあめっせいーじ
-        / %li.chat-message
-        /   .chat-message__header
-        /     %p.chat-message__name Nagisa
-        /     %p.chat-message__time 2017/05/04 15:27:46
-        /   %p.chat-message__body たいぷあめっせーじ
-
     .chat-footer
       = form_for [@group, @message] do |f|
         = f.text_area :content, placeholder: 'type a message'
