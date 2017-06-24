@@ -32,8 +32,6 @@
           %p.chat-message__body たいぷあめっせーじ
 
     .chat-footer
-      %form
-        %textarea{placeholder: "type a message"}
-        %i.fa.fa-picture-o.fa-lag{hidden: "true"}
-        %input{type: "submit"}
-
+      = form_for [@group, @message] do |f|
+        = f.text_area :content, placeholder: 'type a message'
+        = f.submit "SEND"
