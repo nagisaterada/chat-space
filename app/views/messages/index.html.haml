@@ -17,7 +17,9 @@
         %h2
           = @group.name
         %p.chat-header__users
-          Members: sample_user
+          Members:
+          - @users.each do |user|
+            = user.name
       .chat-header__right
         = link_to 'edit', class: 'chat-header__edit-btn' do
           Edit

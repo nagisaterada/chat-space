@@ -8,11 +8,11 @@ before_action :authenticate_user!, except: :index
     @group = Group.find(params[:group_id])
     @message = Message.new
     @messages = @group.messages
-    @users = @group.users.name
+    @users = @group.users
   end
 
   def create
-    @message = Message.new(create_params)
+    @message = current_user.messages.new(create_params)
     if @message.save
       redirect_to group_messages_url(params[:group_id]), notice: 'メッセージを入力しました'
     else
@@ -24,7 +24,7 @@ before_action :authenticate_user!, except: :index
   private
 
   def create_params
-    params.require(:message).permit(:content, :image).merge(group_id: params[:group_id], user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(group_id: params[:group_id])
   end
 
 

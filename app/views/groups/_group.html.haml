@@ -2,8 +2,7 @@
   %p.chat-group__name
     = group.name
   %p.chat-group__message
-    - if group.messages.present?
-      - message = group.messages.last
-      = message.content
+    -if  message = group.messages.last
+      = message.try(:content)
     - else
       まだメッセージがありません。
