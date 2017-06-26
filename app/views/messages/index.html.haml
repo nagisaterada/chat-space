@@ -1,7 +1,8 @@
 .chat
   .chat__side
     .chat__side__user
-      %h5  sample_user
+      %h5
+        = current_user.name
       .chat__side__user__actions
         = link_to new_group_path do
           %i.fa.fa-pencil-square-o.fa-lg{hidden: "true"}

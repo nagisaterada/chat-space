@@ -5,16 +5,16 @@ before_action :authenticate_user!, except: :index
 
   def index
     @groups = current_user.groups
-    @group = Group.find(3)
+    @group = Group.find(params[:group_id])
     @message = Message.new
-    @messages = @group.messages(:content)
+    @messages = @group.messages
     @users = @group.users.name
   end
 
   def create
     @message = Message.new(create_params)
     if @message.save
-      redirect_to group_messages_url(3), notice: 'メッセージを入力しました'
+      redirect_to group_messages_url(params[:group_id]), notice: 'メッセージを入力しました'
     else
       flash.now[:alert] = 'メッセ―ジを入力してください'
       render :new
