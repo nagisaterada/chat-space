@@ -31,6 +31,6 @@
       = form_for [@group, @message] do |f|
         = f.text_area :content, placeholder: 'type a message'
         %label.chat-footer-image
-          = f.file_field :image, class: "file_field"
+          = f.file_field :image, class: 'file_field'
           %i.fa.fa-image
-        = f.submit "SEND"
+        = f.submit 'SEND'

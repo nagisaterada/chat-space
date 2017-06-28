@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 
-  before_action :authenticate_user!, alert: "ログインしてください"
+  before_action :authenticate_user!, alert: 'ログインしてください'
   before_action :find_group, only:[:edit, :update]
 
 
@@ -36,9 +36,9 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, user_ids:[])
   end
 
-  def find_group
-    @group = Group.find(params[:id])
-  end
+  # def find_group
+  #   @group = Group.find(params[:id])
+  # end
 
 
 end
