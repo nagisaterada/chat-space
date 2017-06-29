@@ -14,4 +14,7 @@
 
 # ignore upload image-file
 *.jpg
+*.jpeg
+*.gif
+*.png
 
