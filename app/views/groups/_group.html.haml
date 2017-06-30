@@ -1,3 +1,8 @@
-%p.chat-group__name
-  = group.name
-%p.chat-group__message まだメッセージはありません。
+= link_to group_messages_path(group) do
+  %p.chat-group__name
+    = group.name
+  %p.chat-group__message
+    - if  message = group.messages.last
+      = message.try(:content)
+    - else
+      まだメッセージがありません。

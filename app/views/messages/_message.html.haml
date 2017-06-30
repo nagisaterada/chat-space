@@ -1,0 +1,9 @@
+.chat-message__header.clearfix
+  %p.chat-message__name
+    = message.group.name
+  %p.chat-message__time
+    = message.created_at.to_s(:datatime)
+%p.chat-message__body
+  = simple_format(message.content)
+  - message.try(:image)
+  = image_tag message.image
