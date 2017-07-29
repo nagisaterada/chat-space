@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :user do
+  factory :message do
     content               "aaa"
     image                 "aaa.jpg"
     user_id               "000"
